@@ -66,8 +66,8 @@
         <section class="single-donations">
             <div class="single-donations-container">
                 <h1>Your Donation will Provide...</h1>
-                <div class="left-content">
-                    
+                <div class="top-content">
+
                     <div class="single-donations-card">
                         <h1>Rs 50</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, itaque.</p>
@@ -80,7 +80,7 @@
                         <h1>Rs 50</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, itaque.</p>
                     </div>
-                    
+
                     <div class="single-donations-card">
                         <h1>Rs 50</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, itaque.</p>
@@ -95,7 +95,7 @@
                     </div>
 
                 </div>
-                <div class="right-content">
+                <div class="bottom-content">
                     <h3>Select an Amount<span>*</span></h3>
                     <div class="pay-circle-cards">
                         <div class="pay-card" onclick="payCardToggleClicked(this)">
@@ -127,13 +127,51 @@
             </div>
 
         </section>
+        <script>
+            const payCards = document.querySelectorAll('.bottom-content .pay-card');
+    
+            payCards.forEach(function (card) {
+                card.addEventListener('click', function () {
+                    payCards.forEach(function (c) {
+                        c.classList.remove('pay-card-clicked');
+                        c.classList.add('pay-card');
+                    });
+    
+                    card.classList.add('pay-card-clicked');
+                    card.classList.remove('pay-card');
+                });
+            });
+    
+    
+    
+        </script>
 
+        <section class="programme-donations">
+            <div class="programme-donations-content">
+                <div class="container mt-5">
+                    <div class="card">
+                      <div class="card-header expandable-heading" onclick="toggleExpand()">
+                        <h5 class="mb-0">Click to expand</h5>
+                      </div>
+                      <div id="expandableContent" class="expandable-content">
+                        <div class="card-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed arcu ac odio viverra aliquam. Vivamus posuere est et tincidunt ultrices. Integer sit amet neque quis elit ultrices interdum.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            
+        </section>
 
     </main>
 
+
     <script>
-        function payCardToggleClicked(element){
-            element.classList.toggle("pay-card-clicked");
+        function toggleExpand() {
+            var content = document.getElementById("expandableContent");
+            content.classList.toggle("show");
+
         }
     </script>
 

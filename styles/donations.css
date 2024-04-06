@@ -51,7 +51,7 @@ body{
     text-align: center;
 }
 
-.left-content{
+.top-content{
     margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -68,7 +68,7 @@ body{
     text-align: center;
 }
 
-.right-content{
+.bottom-content{
     margin-top: 4rem;
     display: flex;
     flex-direction: column;
@@ -77,18 +77,18 @@ body{
 
 }
 
-.right-content h3 span{
+.bottom-content h3 span{
     color: var(--dark-orange-color);
 }
 
-.right-content .pay-circle-cards{
+.bottom-content .pay-circle-cards{
     display: flex;
     gap: 2rem;
 }
 
 
 
-.right-content .pay-card{
+.bottom-content .pay-card{
     background-color: rgb(62, 62, 62);
     color: white;
     height: 80px;
@@ -98,14 +98,20 @@ body{
     justify-content: center;
     border-radius: 100px;
     border: 1px solid transparent;
+    cursor: pointer;
 }
 
-.pay-card-clicked {
+.bottom-content .pay-card:hover{
+    background-color: rgb(97, 97, 97);
+}
+
+.bottom-content .pay-card-clicked {
     color: black;
-    border: 1px solid var(--dark-orange-color);
+    border: 2px solid var(--dark-orange-color);
     background-color: var(--light-orange-color);
     height: 80px;
     width: 80px;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -144,6 +150,47 @@ button{
 
 
 
-@media screen and (max-width : 770px) {
-    
+@media screen and (max-width : 800px) {
+    .top-content{
+        grid-template-columns: repeat(2,1fr);
+    }
 }
+
+@media screen and (max-width : 700px) {
+    .bottom-content .pay-circle-cards{
+        flex-direction: column;     
+    }
+    input{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width : 450px) {
+    .top-content{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+.programme-donations{
+    margin-bottom: 100px;
+}
+
+.expandable-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  .expandable-heading {
+    cursor: pointer;
+    background-color: #ddd;
+    padding: 10px;
+  }
+  .expandable-heading:hover {
+    background-color: #bbb;
+  }
+  .expandable-content.show {
+    max-height: 1000px; /* Adjust this value to match your content's height */
+    transition: max-height 1s ease-in;
+  }
