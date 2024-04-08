@@ -21,7 +21,7 @@ body{
 }
 
 .form-container{
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -81,7 +81,7 @@ button:hover{
 
     overflow: hidden;
     border-radius: 20px;
-    max-width: 600px;
+    max-width: 700px;
     height: 60vh;
 }
 
@@ -100,4 +100,13 @@ img{
     body{
         overflow: auto;
     }
+    .img-container{
+        border-radius: 20px;
+        height: 40vh;
+    }
+
+    img{
+        object-fit: fill;
+    }
+
 }
