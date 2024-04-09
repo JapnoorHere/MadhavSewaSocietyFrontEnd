@@ -143,7 +143,8 @@ body {
     padding: 3rem;
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 80%;
+    margin-left: 10em;
 }
 
 .donations-content .left-container .img-container {
@@ -237,7 +238,7 @@ body {
 }
 
 
-@media screen and (max-width : 940px) {
+@media screen and (max-width : 1128px) {
     .donations-content h1 {
         text-align: center;
     }
@@ -249,7 +250,7 @@ body {
 
     .donations-content .left-container {
         width: 100%;
-
+        margin: 0;
     }
 }
 
@@ -301,15 +302,15 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    gap: 1rem;
+    gap: 3rem;
 }
 
 
 
 .events-container .events-content .events-card {
-    height: 350px;
-    width: 420px;
-    border-radius: 10px;
+    height: 400px;
+    width: 500px;
+    border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
 }

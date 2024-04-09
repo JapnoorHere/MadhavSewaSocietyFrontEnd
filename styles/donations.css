@@ -40,7 +40,6 @@ body {}
 /* single donations section */
 
 .single-donations {
-    height: 100vh;
     margin-top: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -131,7 +130,7 @@ form {
     gap: 1rem;
 }
 
-input {
+form input {
     width: 70%;
     margin: 0 auto;
     border-radius: 10px;
@@ -140,7 +139,7 @@ input {
     border: none;
 }
 
-input::placeholder {
+form input::placeholder {
     color: rgb(140, 140, 140);
 }
 
@@ -179,7 +178,7 @@ button {
 }
 
 .programme-donations {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .programme-donations-content{
@@ -187,74 +186,74 @@ button {
     margin: 0 auto;
 }
 
-input[type='checkbox'] {
+.accordion{
+    margin: 60px auto;
+}
+
+.accordion li{
+    list-style: none;
+    width: 100%;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background: var(--light-orange-color);
+}
+
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.accordion li label::before{
+    content : '+';
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.accordion li input[type="radio"]{
     display: none;
 }
 
-.wrap-collabsible {
-    margin: 1.2rem 0;
-}
-
-.lbl-toggle {
-    display: block;
-    font-weight: bold;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    text-align: left;
-    padding: 1rem;
-    color: white;
-    background: var(--dark-orange-color);
-    cursor: pointer;
-    border-radius: 7px;
-    transition: all 0.25s ease-out;
-}
-
-.lbl-toggle:hover {
-    color: #DDD;
-}
-
-.lbl-toggle::before {
-    content: ' ';
-    display: inline-block;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid currentColor;
-    vertical-align: middle;
-    margin-right: .7rem;
-    transform: translateY(-2px);
-    transition: transform .2s ease-out;
-}
-
-.toggle:checked+.lbl-toggle::before {
-    transform: rotate(90deg) translateX(-3px);
-}
-
-.collapsible-content {
-    max-height: 0px;
+.accordion .accordion-content{
+    padding: 0 10px;
+    max-height: 0;
     overflow: hidden;
-    transition: max-height .25s ease-in-out;
+    transition: max-height 0.3s, padding 0.3s;
 }
 
-.toggle:checked+.lbl-toggle+.collapsible-content {
-    max-height: 350px;
+.accordion-content .img-container{
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 500px;
+    margin: 1rem;
 }
 
-.toggle:checked+.lbl-toggle {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+.accordion-content .img-container img{
+    height: 100%;
+    width: 100%;
 }
 
-.collapsible-content .content-inner {
-    background: var(--light-orange-color);
-    border-bottom: 1px solid var(--light-orange-color);
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
-    padding: .5rem 1rem;
+
+
+.accordion input[type="radio"]:checked + label + .accordion-content{
+    max-height: 400px;
+    padding: 10px 10px 20px;
 }
 
-.collapsible-content p {
-    margin-bottom: 0;
+
+
+.accordion input[type="radio"]:checked + label::before{
+    content: '-';
 }
+
+
+
 
 
 
