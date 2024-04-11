@@ -182,18 +182,19 @@ button {
 }
 
 .programme-donations-content{
-    max-width: 1300px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
 .accordion{
-    margin: 60px auto;
+    padding: 1rem;
 }
 
 .accordion li{
     list-style: none;
     width: 100%;
-    margin: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding: 10px;
     border-radius: 8px;
     background: var(--light-orange-color);

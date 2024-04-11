@@ -14,16 +14,16 @@
 }
 
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
 .daily-motivation-container {
     max-width: 100vw;
-    height: 50vh;
+    height: 70vh;
 }
 
 .daily-motivation-content {
@@ -42,7 +42,7 @@
 
 .daily-motivation-content h1 {
     color: white;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 900;
     margin-top: 8rem;
 }
@@ -91,7 +91,7 @@
 }
 
 .all-videos-card-content .cardd h1{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 
@@ -162,7 +162,6 @@
 .mudras-container{
     max-width: 1400px;
     margin: 0 auto;
-    height: 100vh;
     padding: 2rem;
 }
 
@@ -185,12 +184,14 @@
     width: 300px;
     background-color: var(--light-orange-color);
     padding: 2rem;
+    border: 2px solid var(--dark-orange-color);
     transition: all 0.25s ease-in-out;
     
 }
 
 .mudra-card:hover{
     transform: scale(1.05);
+    rotate: 0.5deg;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -216,7 +217,6 @@
     }
     
 }
-
 
 @media screen and (max-width : 678px) {
     .mudras-card-content{

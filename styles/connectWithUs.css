@@ -232,6 +232,9 @@ button:hover {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
+    .connect-card{
+        width: 500px;
+    }
 }
 
 
@@ -247,7 +250,11 @@ button:hover {
         height: 180px;
         width: 250px;
     }
-
+}
+@media screen and (max-width: 550px) {
+    .connect-card{
+        width: 350px;
+    }
 }
 
 

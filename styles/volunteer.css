@@ -22,7 +22,7 @@
 }
 
 body{
-    overflow: hidden;
+    background-color: var(--light-orange-color);
 }
 
 .volunteer-form{
@@ -30,7 +30,7 @@ body{
 }
 
 .form-container{
-    max-width: 1400px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -38,7 +38,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    flex-direction: row-reverse;
     gap: 5rem;
 }
 
@@ -54,7 +54,7 @@ input,textarea,select{
     margin: 0 auto;
     border-radius: 10px;
     padding: 1rem;
-    background-color: rgb(239, 239, 239);
+    background-color: white;
     border: none;
 }
 

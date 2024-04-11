@@ -61,6 +61,12 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: all 0.25s linear 0s;
+}
+
+.values-card:hover{
+    scale: 1.05;
+
 }
 
 .values-card p {
@@ -120,6 +126,97 @@ body {
 
 
 }
+
+
+
+
+
+.about {
+    background-color: var(--light-orange-color);
+  
+  }
+  
+  .about .about-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem 2rem 1rem;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .about .about-container .content-left .img-container {
+    overflow: hidden;
+    border-radius: 10px;
+    height: 300px;
+  }
+  
+  .about .about-container .content-left .img-container img {
+    height: 100%;
+    border-radius: 10px;
+    width: 100%;
+  }
+  
+  .about .about-container .content-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .about .about-container .content-right h1 {
+    font-size: 2.5rem;
+  }
+  
+  .about .about-container .content-right h3 {
+    color: var(--dark-orange-color);
+  }
+  
+  .about .about-container .content-right ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 0.4rem;
+  }
+
+  .content-right button{
+    background-color: var(--dark-orange-color);
+    color: white;
+    padding:  0.7rem 1rem ;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: all 0.25s linear 0s;
+  }
+
+  .content-right button:hover{
+    background-color: var(--light-orange-color);
+    color: black;
+    border: 2px solid var(--dark-orange-color);
+  }
+
+  
+  /* 
+    & Media query for about section
+  */
+  
+  @media screen and (max-width: 700px) {
+    .about .about-container {
+      flex-direction: column;
+    }
+  
+    .about .about-container .content-left .img-container img {
+      width: 100%;
+      align-self: center;
+    }
+  
+    .about .about-container .content-right {
+      text-align: center;
+    }
+  }
+
+
+
 
 
 .donations {
@@ -302,14 +399,14 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    gap: 3rem;
+    gap: 2rem;
 }
 
 
 
 .events-container .events-content .events-card {
-    height: 400px;
-    width: 500px;
+    height: 300px;
+    width: 400px;
     border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
