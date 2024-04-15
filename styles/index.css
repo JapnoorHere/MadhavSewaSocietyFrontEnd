@@ -66,7 +66,7 @@ body {
 
 .values-card:hover{
     scale: 1.05;
-
+    box-shadow: 0px 5px 15px var(--dark-orange-color);
 }
 
 .values-card p {
@@ -286,7 +286,8 @@ body {
 
 .donations-content .right-container .donations-card {
     width: 250px;
-    height: 200px;
+    height: 250px;
+    padding: 0.8rem;
     background: white;
     display: flex;
     justify-content: center;
@@ -294,6 +295,10 @@ body {
     flex-direction: column;
     gap: 0.5rem;
     border-radius: 0px 20px 0px 20px;
+}
+
+.donations-card p{
+    text-align: center;
 }
 
 .donations-card button {
@@ -362,7 +367,6 @@ body {
     .donations-content .left-container .img-container{
         height: 180px;
         width: 180px;
-    
     }
 }
 
@@ -410,6 +414,7 @@ body {
     border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
+    transition: all 0.25s linear 0s;
 }
 
 .events-container .events-content .events-card .img-container {
@@ -454,6 +459,10 @@ body {
     color: var(--dark-orange-color);
 }
 
+.events-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px var(--dark-orange-color);
+}
 
 .events-container .events-content .events-card:hover .img-container p,
 .events-container .events-content .events-card:hover .img-container h3 {

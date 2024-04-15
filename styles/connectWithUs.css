@@ -194,7 +194,6 @@ button:hover {
 }
 
 .recent-inner-container {
-    margin-top: 5rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
@@ -205,6 +204,12 @@ button:hover {
     height: 200px;
     width: 300px;
     margin: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.recent-inner-container .cardd:hover{
+    transform: scale(1.05);
+    box-shadow: var(--dark-orange-color)0px 5px 15px;
 }
 
 .recent-inner-container .cardd h1 {
@@ -218,7 +223,6 @@ button:hover {
     object-fit: cover;
     overflow: hidden;
     border-radius: 5px;
-
 }
 
 .recent-inner-container .cardd .img-container img {

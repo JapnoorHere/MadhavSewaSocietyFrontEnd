@@ -15,7 +15,7 @@
 
 
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -180,6 +180,7 @@
 }
 
 .mudra-card{
+    cursor: pointer;
     height: 350px;
     width: 300px;
     background-color: var(--light-orange-color);
@@ -191,7 +192,7 @@
 
 .mudra-card:hover{
     transform: scale(1.05);
-    rotate: 0.5deg;
+    rotate: 1deg;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -201,15 +202,50 @@
     justify-content: center;
 }
 
+.mudra-card h3{
+    text-align: center;
+}
 
 .mudra-card .img-container img{
     height: 100%;
 }
 
 .mudra-card p{
+    text-align: center;
     font-size: 0/8rem;
 }
 
+.dialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    height: 90vh;
+    width: 95vw;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    overflow: auto;
+    max-height: 80%;
+  }
+  
+  .dialog-content {
+    text-align: center;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: red;
+  }
 
 @media screen and (max-width : 1000px) {
     .mudras-card-content{
